@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>AboutCSS | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="CSS的一些知识">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AboutCSS">
+<meta property="og:url" content="http://example.com/2021/06/05/AboutCSS/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="CSS的一些知识">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-06-05T07:45:22.000Z">
+<meta property="article:modified_time" content="2021-06-25T06:15:24.030Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="learningProgress">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-AboutCSS" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/06/05/AboutCSS/" class="article-date">
+  <time class="dt-published" datetime="2021-06-05T07:45:22.000Z" itemprop="datePublished">2021-06-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      AboutCSS
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="CSS的一些知识"><a href="#CSS的一些知识" class="headerlink" title="CSS的一些知识"></a>CSS的一些知识</h1><span id="more"></span>
+
+<p>目录</p>
+<p><a href="#wendang">文档流(normal flow)</a><br><a href="#reset">css reset 样式重置 和 normalize</a><br><a href="#yichu">溢出的处理</a><br><a href="#bk">边框阴影</a><br><a href="#wbj">外边距的溢出</a><br><a href="#nbj">什么时候使用内边距</a><br><a href="#bb">box-sizing:border-box;</a><br><a href="#cc">背景图片的尺寸</a><br><a href="#gd">背景图片的固定</a><br><a href="#jb">渐变 gradient</a><br><a href="#gsh">文本格式化</a><br><a href="#dq">文本对齐 text-align:center / justify</a><br><a href="#yy">文本阴影</a><br><a href="#hb">边框合并</a><br><a href="#lo">布局（layout）</a><br><a href="#fl">浮动</a><br><a href="#nfl">清除浮动</a><br><a href="#tt">高度坍塌</a><br><a href="#mt">显示方式</a><br><a href="#xg">显示效果</a><br><a href="#qbb">visibility:hidden和display:none的区别</a><br><a href="#tmd">透明度</a><br><a href="#or">opacity和rgba的区别</a><br><a href="#cz">vertical-align 垂直对齐方式</a><br><a href="#cl">光标的设置</a><br><a href="#lbys">列表的样式</a><br><a href="#dw">定位</a><br><a href="#dd">堆叠顺序</a></p>
+<h2 id="文档流-normal-flow"><a href="#文档流-normal-flow" class="headerlink" title="文档流(normal flow)"></a><a id="wendang">文档流(normal flow)</a></h2><p>网页是一个多层的结构，一层摞着一层</p>
+<p>通过css可以分别为每一层来设置样式</p>
+<p>作为用户来讲只能看到最顶上一层</p>
+<p>这些层中，最底下的一层称为文档流，文档流是网页的基础，我们所创建的元素默认都是在文档流中进行排列</p>
+<p>对于我们来元素主要有两个状态</p>
+<p>在文档流中<br>不在文档流中( 脱离文档流)<br>元素在文档流中有什么特点:</p>
+<p>块元素</p>
+<p>块元素会在页面中独占行(自 上向下垂直排列)<br>默认宽度是父元素的全部(会把父元素撑满)<br>默认高度是被内容撑开(子元素)<br>行内元素</p>
+<p>行内元素不会独占页面的一行， 只占自身的大小<br>行内元素在页面中左向右水平排列，如果一行之中不能容纳下所有的行内元则元素 会换到第二行继续自左向右排列 (书写习惯一致)<br>行内元素的默认宽度和高度都是被内容撑开<br>行内元素的盒模型</p>
+<p>行内元素不支持设置宽度和高度<br>行内元素可以设置padding,但是垂直方向padding不会影响页面的布局 ;<br>行内元素可以设置border.垂直方向的border不会影响页面的布局;<br>行内元素可以设置margin,垂直方向的margin不会影响布局<br>display用来设置元素显示的类型</p>
+<p>可选值:<br>inline将元素设置为行内元素<br>block将元素设置为块元素<br>inline-block将元素设置为行内块元素（两个行内块同行显示，会受换行符影响有间隙（相当于字与字之间的空隙），标签间紧挨着就不会出现间隙）<br>行内块，既可以设置宽度和高度又不会独占一行<br>table将元素设置为一个表格<br>none元素不在页面中显示<br>visibility用来设置元素的显示状态</p>
+<p>可选值:<br>visible 默认值，元素在页面中正常显示<br>hidden元素在页面中隐藏不显示，但是依然占据页面的位置<br>外边距间影响布局 ：水平取和 垂直取最高（行内元素垂直方向不会影响页面的布局 ）</p>
+<p>元素的水平方向的布局:元素在其父元素中水平方向的位置由以下几个属性共同决定 margin-left border-left padding- left width padding-right border-right margin-right<br>一个元素在其父元素中，水平布局必须要满足以下的等式margin-left+border-left+padding-left+width+padding-right +border-right+margin-right =其父元素内容区的宽度 (必须满足)<br>0+ 0+0+200+0+0+0=800<br>↓调整右外边距（默认）使等式成立<br>0+0+0+200+0+0+600=800<br>100+0+0+200+0+0+400=800<br>100+0+0+200+0+0+500=800<br>如以上等式必须满足，如果相加结果使等式不成立，则称为过渡约束，则等式会自动调整<br>调整的情祝:如果这七个值中没有为auto 的情况，则浏览器会自动调整margin-right值以使等式满足<br>这七个值中有三个值可设置为auto<br>width margin-left maring-right<br>如果某个值为auto,则会自动调整为auto的那个值以使等式成立<br>0+0+0+auto+0+0+0=800 auto=800<br>特点是 三个值当中如果有一个值是auto，当等式不满足的条件下 就调整这个设auto的值<br>如果两个值是auto ， 如果一个是宽度 那么外边距为0<br>三个值都是auto 那么两个外边距都是0 宽度取最大<br>两个外边距是auto 会把两个外边距设置成两个相等的值，使元素在父元素中居中(给定宽）<br>width:800px;<br>margin:0 auto；</p>
+<p>overflow:hidden可以解决高度塌陷 外边距溢出 浮动遮挡下面元素（给不需要被遮挡的元素）开启BFC<br>clear:both清除浮动对当前元素的影响，给不受上面元素浮动影响的元素设置<br>line-hight设置行高可以使元素中文字垂直居中也可撑开元素盒子不用设置元素的高，line-hight可以继承给其子元素</p>
+<p>a标签去下划线 text-decoration:none; ul中去除li前面的小黑点 list-style:none;<br>text-align:center(水平居中) ; line-hight:样式里的高度(垂直居中); 结合使用(若要图片居中,给父元素设置水平居中,则其中元素居中 切记不可设置垂直居中,不然影响下面文本布局都会存在行高的问题)<br>outline:0; border:0;list-style:none;写进通配符里去,设全部样式<br>border-radius:50% ;(前提设宽高) 轮播图下小圆点应用</p>
+<h2 id="css-reset-样式重置-和-normalize"><a href="#css-reset-样式重置-和-normalize" class="headerlink" title="css reset 样式重置 和 normalize"></a><a id="reset">css reset 样式重置 和 normalize</a></h2><p>不同浏览器对元素默认的样式有很大差异 , 为了各个浏览器样式的统一 , css reset把元素的特有样式都清空导致这些元素失去了本来意义, 不管你是不是需要html的原始样式,都清掉 , 我们可以自已编写css reset,也可以使用第三方别人写好的 , 先把所有样式都清除,让元素基本都没有 , 但是需要基本的样式的时候 , 还得手动添加,浪费资源 *{margin: 0;padding: 0;}属于最基本的css reset<br>normalize.css 是一种非常流行的css reset的解决方案 , 保留了很多元素的语义特征,重写样式比较柔和 , 保存了很多默认样式,提升了css的兼容性,修复了很多不同浏览器的bug , BootStrap使用的是normalize<br>css reset 和 normalize区别,css reset是全部样式放一起清空 , normalize是一个个慢慢清</p>
+<p>超链接<br>href=“<a target="_blank" rel="noopener" href="http://www.wwebg20.top/%E2%80%9D">http://www.wwebg20.top/”</a> 链接的路径<br>target=”” 指定链接的打开方式<br>_self 默认缺省值,在当前页面打开<br>_blank 在新页面打开链接</p>
+<p>a标签的其它表现形式<br>下载 <a href="xxx.zip">xxx.zip</a><br>发送邮件 <a href="xxx@xxx.com">发送邮件</a><br>调用js</p>
+<p><a href="javascript:show()">调用js</a><br>1<br>回到页面顶部 <a href="#">返回顶部</a></p>
+<p>1.什么是锚点<br>锚点,就是页面中的一个记号<br>可以通过超链接,跳转回这个记号的位置处<br>2.使用锚点—-定义锚点<br>①h4的方式 <a name="锚点名称"></a><br>②h5的方式 <any id="锚点名称"></any><br>any:任意元素<br>3.使用锚点—-跳转锚点</p>
+<p><a href="#锚点名称">****</a><br>1<br><a href="#down">点击下来</a></p>
+<p>  …</p>
+<p><a id="down" href="#">点击上去</a></p>
+<p>文本样式标记</p>
+<p>加粗<b></b>   <strong></strong><br>斜体<i></i>    <em></em><br>删除线<s></s>   <del></del><br>下划线<u></u><br>h5推荐使用有语义的标签<br><sub></sub> 下标<br><sup></sup> 上标 </p>
+<p>CSS样式的特征<br>①继承性<br>我们为一个元素设置的样式同时也会作用到他的后代元素上<br>继承是发生在祖先和后代之间的<br>大部分的css效果,是可以直接被后代元素继承的，<br>继承的设计是为了方便我们开发，利用继承我们可以将一些通用的样式设置到共同的祖先元素上，这样只需要设置一次即可让所有的元素都具有这样的样式<br>注意：并不是所有的样式都会被继承，背景相关的 布局相关的 这些样式不能继承<br>②层叠性<br>可以为一个元素设置多个样式规则<br>规则中,属性不冲突时,都可以作用到当前元素上<br>③优先级<br>如果样式声明时属性冲突,按照样式规则的优先级取应用样式<br>默认优先级: 最高 内联样式<br>内部,外部 就近原则(link的编写位置,决定距离远近)<br>最低 浏览器默认样式<br>④调整优先级<br>!important 规则<br>放在属性值与分号之间,与值之间有空格<br>如果一个样式属性和值带有!important 不会被其它样式覆盖<br>内联都不能替代他,<br>内联样式不能添加!important<br>通用选择器<br>*{样式声明} ,匹配所有元素<br>但是由于及其低下.*在项目中使用非常少<br>*{margin:0;padding:0} 所有元素的内外边距清空<br>ps:为了让代码可以适应各个浏览器,我们一般在开发前,把默认样式一次性清空或者统一,不让不同浏览器出现偏差,这个行为,叫做css reset<br>元素选择器,标签选择器<br>设置页面中所有这个元素的公用样式<br>ex:div{样式声明} span{样式声明}</p>
+<p>ID选择器(专属定制)</p>
+<p>#id值{样式声明}<br>匹配页面中,对应id的这个元素的样式<br>一般id选择器在项目中不单独使用<br>而是作为后代选择器或者子代选择器的开头部分<br>#content div&gt;span a:hover{}<br>类选择器<br>定义类选择器 .类名{样式声明}<br>使用类选择器<br>注意:类名的规范:1.声明的时候,必须写点,不能省略<br>2.class调用的时候不能有点<br>3.类名不能以数字开头<br>4.类名中只能有两种符号 - _<br>类选择器的其它使用方式<br>1.多类选择器</p>
+<any class="类名1 类名2 类型3......">
+1
+2.分类选择器
+元素选择器.类名{样式声明}
+匹配具体某一个元素,同时这个元素引用这个类名
+3.分类选择器
+.类名1.类名2{样式声明}
+同一个标签,引用了类名1和类名2,就可以应用这个样式
+分类选择器作用:
+1.更精确的找到目标元素
+2.提升选择器的权值
+群组选择器
+将多个选择器使用,连接,统一定义公共的样式
+legend,li,ol,p,pre,td,textarea,th,ul{margin:0;padding:0}
+后代选择器
+通过元素的后代关系匹配元素
+后代:一级或者多于一级的嵌套
+div p span{color:red;}
+子代选择器
+通过元素的子代关系匹配元素
+子代:一级的嵌套
+div>p>span{background-color:yellow}
+
+<p>伪类选择器<br>匹配元素不同状态的选择器<br>:link 匹配元素未访问时的状态<br>:visited 匹配元素访问后的状态<br>:active 匹配元素激活的状态<br>:hover 匹配鼠标悬停到元素上时的状态<br>:focus 匹配元素获取焦点时的状态<br>选择器的权值<br>权值:标识当前选择器的重要程度,权值越大,优先级越高<br>!important &gt;1000<br>内联 1000<br>id选择器 100<br>类选择器 10<br>伪类 10<br>元素选择器 1<br>*通用选择器 0<br>继承的样式 无<br>权值的特点<br>1.当一个选择器含有多个选择器时,需要把所有的选择器的权值相加,然后比较,权值大的优先显示<br>2.权值相同,就近原则<br>3.群组选择器,不相加,各算个的权值<br>4.内联样式中不能添加!important<br>5.选择器权值的计算,最终的结果不会超过本身的最大数量级<br>尺寸属性<br>设置元素的宽度和高度<br>width 宽度 px为单位的数字,%父元素宽度百分比<br>height 高度 px为单位的数字,%父元素宽度百分比<br>(父元素没定义高度,%失效)<br>max-width 最大宽度<br>min-width 最小宽度<br>max-height 最大高度<br>min-height 最小高度<br>em相对于父元素定义的数值的整倍数<br>rem相对于html元素定义的数值的整倍数<br>% 相对于父元素数值的百分比<br>max-width:100% 代码元素可以缩放,但是最大宽度不能超过原始尺寸<br>块级元素</p>
+<p>设置宽度有效<br>没设置宽默认是父元素100%<br>没设置高默认高靠内容撑开没内容没高不显示<br>4个方向外边距都有效<br>行内元素</p>
+<p>设置宽高无效,自带宽高属性的设置有效<br>实际内容是靠内容撑开,没内容就没宽高<br>只有左右外边距有效,上下无效<br>行内块元素</p>
+<p>设置宽高有效<br>默认自带宽高(不同浏览器对input的默认样式设置差别比较大)<br>4个方向外边距都有效,但是如果因为上下外边距改变了行内块的位置,那么同一行的其他行内元素和行内块元素的位置跟着一起改变<br>总结:1.所有块级元素都可以设置宽高 2.所有行内块默认自带宽高,也可以设置宽高覆盖默认宽高 3.多数行内元素设置宽高无效(img除外) 4.属性带有宽高的标签,都可以设置样式的宽高(img,table)</p>
+<h2 id="溢出的处理"><a href="#溢出的处理" class="headerlink" title="溢出的处理"></a><a id="yichu">溢出的处理</a></h2><p>overflow属性写到父元素里<br>当内容较大元素区域较小的时候,会发生溢出,默认是纵向溢出<br>overflow:visible;溢出部分显示<br>overflow:hidden;溢出部分影藏<br>overflow:scroll;溢出部分显示纵向滚动条(不管是否溢出都添加滚动条的槽)<br>overflow-x:scroll overflow-y:scroll 单独设置x轴y轴的滚动条<br>overflow:auto;溢出部分显示纵向滚动条(溢出添加滚动条的槽,不溢出就没有槽)<br>如何改成横向溢出<br>在宽度比较小的容器内部,添加一个宽度较大的子元素,overflow:scroll给他增加横向滚动条<br>边框的简写方式<br>border:width style color;<br>width:边框的粗细,px为单位的数字<br>style:边框的样式 solid 实线 dotted点虚线 dashed断线虚线 double双实线<br>color:边框的颜色 transparent 等同于rgba(0,0,0,0)<br>border-bottom-color:transparent; 透明<br>最简方式:border:style; border:0;取消边框(css中只有数值0可以省略单位 margin:0;)<br>单边定义<br>只设置某一条边的单边属性<br>border-top:width style color;<br>border-right:width style color;<br>border-bottom:width style color;<br>border-left:width style color;<br>border-方向:width style color; 方向top/right/bottom/left<br>单属性的定义<br>border- style:solid ;<br>border- width :2px;<br>border- color :red;<br>border-top- color :red;<br>border-bottom- style :solid;<br>border-方法-属性:<br>圆角 border-radius:以px为单位的数字 50%圆<br>border-top-left-radius:左上角 border-radius:0;取消圆角</p>
+<h2 id="边框阴影"><a href="#边框阴影" class="headerlink" title="边框阴影"></a><a id="bk">边框阴影</a></h2><p>box-shadow:h-shadow v-shadow blur spread color<br>h-shadow: 水平方向的阴影偏移<br>v-shadow:垂直方向的阴影偏移<br>blur:阴影模糊距离<br>spread:阴影大小<br>color:阴影颜色<br>最简方式box-shadow:h-shadow v-shadow;</p>
+<p>轮廓 边框的边框,绘制于边框外面的线条,不占用元素空间<br>outline:width style color;一般情况下,我们会把轮廓清除 outline:0;<br>border:0;边框清除</p>
+<p>框模型—–盒子模型<br>元素在页面上实际占地空间的计算方式<br>默认实际占地宽度:<br>左外边距+左边框+左内边距+内容区域宽度+ 右内边距+右边框+右外边距<br>外边距margin 改变外边距,元素有位移效果 外边距,由于元素位置的微调,精确地关注上外边距和左外边距(从元素的左上开始渲染(画页面上)) magin-top/left/right/bottom取值:距离哪个距离有多远, px为单位 top +↓ ,-↑ left+→,-←<br>% 上右下左,都是父元素宽度的百分比,跟高度没有关系<br>auto 上下外边距auto无效,只对设置了宽度的元素有效,让元素在父元素内水平居中<br>margin:auto; 水平居中<br>margin:v1;设置四个方向的外边距<br>margin:v1 v2 v1:上下 v2:左右 margin:0 auto;上下为0左右居中水平居中<br>margin:v1 v2 v3 v1:上 v2:左右 v3:下<br>margin:v1 v2 v3 v4 上右下左<br>padding的写法一样<br>外边距的特殊效果:1 外边距合并,两个垂直外边距相遇时,会合并成一个 ,值以最大的为准,解决方案:直接写一个垂直外边距,一下把数值写满<br>行内元素上下外边距无效<br>默认自带外边距的元素body 8px h1~h6 p ol dl pre<br>ul上下16px 左内边距40</p>
+<h2 id="外边距的溢出"><a href="#外边距的溢出" class="headerlink" title="外边距的溢出"></a><a id="wbj">外边距的溢出</a></h2><p>外边距的溢出 同理于子元素高大于父元素高的溢出<br>在特殊情况下,为子元素添加上外边距,会作用到父元素上(改变子元素上外边距,父元素跟着子元素一起动)<br>特殊情况:1.父元素没有上边框 2.子元素内容区域的上沿与父元素的上沿重合<br>解决方案:<br>1.给父元素添加上边框,弊端:增加了父元素实际占地高度（隔开父子间两个相邻外边距）<br>2.设置父元素的内边距 ,弊端:增加了父元素实际占地高度<br>3 .给父元素添加overflow:auto/hidden(使用overflow属性来设置父元素如何处理溢出的子元素); 弊端:如果父元素就不能溢出显示</p>
+<ol start="4">
+<li>给父元素添加第一个子元素 ,<table></table>table为空</li>
+</ol>
+<p>外边距的颜色和使用时机<br>外边距是无色透明的 元素位置微调 一组元素之间需要有空隙的时候 可以选择使用外边距</p>
+<p>padding内边距<br>边框到内容区域的距离,改变内边距,效果是元素变大,实际宽高没有改变,元素实际占地空间变大,内边距的颜色是元素的背景色,可以改变占地面积,不能改变内容的实际宽高<br>取值:px为单位的数字<br>%是父元素宽度的百分比<br>padding没有auto</p>
+<h2 id="什么时候使用内边距"><a href="#什么时候使用内边距" class="headerlink" title="什么时候使用内边距"></a><a id="nbj">什么时候使用内边距</a></h2><p>1.把元素撑开,让边框与内容区域的距离变大<br>box-sizing: 改变盒子模型的计算方式 给设置百分比的子元素<br>取值:<br>1.默认值content-box(设置的width就是content的宽度)默认盒子模型的计算方式:左右外边距+左右边框+左右内边距+width<br>2.border-box(设置的width就是边框以内的宽度)设置的width包含padding+border+内容区域,实际占地宽度的公式 : 左右外边距+width(width=左右内边距+左右边框+内容区域)</p>
+<p>内边距的设置会影响到盒子的大小<br>背景颜色会延伸到内边距上</p>
+<h2 id="box-sizing-border-box"><a href="#box-sizing-border-box" class="headerlink" title="box-sizing:border-box;"></a><a id="bb">box-sizing:border-box;</a></h2><p>用于用百分比设置宽度 将左右内边距 左右边框 内容区域全放到已设置的百分比里面去,从而解决父元素挤不下的问题</p>
+<p>背景图平铺 background-repeat : repeat 默认不平铺 no-repeat不平铺 repeat-x x轴平铺 repeat-y y轴平铺<br>背景图片的定位 background-position: x y;单位px, % (只取一个值的情况下默认是控制x轴,y轴默认居中)<br>关键字 x:left/center/right y:top/center/bottom<br>background-position:left top; background-position:center center;</p>
+<h2 id="背景图片的尺寸"><a href="#背景图片的尺寸" class="headerlink" title="背景图片的尺寸"></a><a id="cc">背景图片的尺寸</a></h2><p>background-size:<br>取值:1.一个以px/%为单位的数字,同时设置宽高 2.两个以px/%为单位的数字,分别设置宽高<br>background-size:cover 要求元素被背景图完整的充满 ,如果图片显示不全,没关系(撑满元素,元素小了则显示不全)<br>background-size:contain要求元素内的背景图片是完整的,如果元素有空白区域,没关系(显示完整图片)</p>
+<h2 id="背景图片的固定"><a href="#背景图片的固定" class="headerlink" title="背景图片的固定"></a><a id="gd">背景图片的固定</a></h2><p>background-attachment:scroll; 默认值 背景图片随着页面滚动条滚动<br>fixed 背景固定在可视区域内,不随着滚动条滚动,但是,只会在自己的元素中显示<br>如果取值fixed,那么background-position:就是相对于body定位,不是相对于原来的元素</p>
+<p>背景的简写方式 background:color img repeat attachment position; 简写方式当中没有background-size<br>最简方式:background:color /url;<br>重写样式的时候不要使用简写,不然会把其他值覆盖,要单写一个属性</p>
+<h2 id="渐变-gradient"><a href="#渐变-gradient" class="headerlink" title="渐变 gradient"></a><a id="jb">渐变 gradient</a></h2><p>多种颜色平缓变化的一种显示效果,属性是background-image<br>控制渐变的主要因素:色标 (一种颜色及其出现的位置) 一个渐变最少两个色标<br>渐变的分类 :<br>线性渐变(以直线的方式来填充渐变色) , background-image:linear-gradient( 方向 , 色标1 , 色标2, … ); (×gradient和括号有空格会导致样式出不来)<br>方向:1.关键字,写终点 to top , to right , to bottom , to left<br>角度: 0deg↑ , 90deg→, 180deg↓ , 270deg←,<br>色标: 1.颜色+位置% , 2.颜色 平均分配位置 , 3.颜色+px</p>
+<p>径向渐变(以圆形的方式来填充渐变色) , background-image:radial-gradient(半径 at 圆心 x 圆心 y ,色标…);<br>注意:色标使用%表示位置,半径才有效<br>圆心取值:<br>1.关键字 x:left/center/right y:top/center/bottom<br>2.以px为单位的数字<br>3.%</p>
+<p>重复渐变(将线性渐变和径向渐变相结合)<br>background-image : repeating-linear-gradient ( )<br>background-image : repeating-radial-gradient ( )</p>
+<p>浏览器兼容问题<br>编写兼容ie8.0以下版本浏览器的行为,叫作编写 css hack<br>浏览器内核 -webkit- chrome/safari , -moz- firefox , -ms- IE ,-o- opera</p>
+<p>注意:带内核写线性渐变,方向写起点不能写终点,不能加 to<br>background:-webkit-linear-gradient( bottom, #27b0f6,#0aa1ed);<br>background:-moz-linear-gradient( bottom, #27b0f6,#0aa1ed);<br>background:-ms-linear-gradient( bottom, #27b0f6,#0aa1ed);<br>background:-o-linear-gradient( bottom, #27b0f6,#0aa1ed);</p>
+<h2 id="文本格式化"><a href="#文本格式化" class="headerlink" title="文本格式化"></a><a id="gsh">文本格式化</a></h2><p>1.字体属性<br>①字号大小<br>font-size: 以px/pt/rem/em为单位的数字<br>②字体的类型<br>font-family:<br>取值:pc中字体库里有的字体,如果字体有空格,建议使用””括起来<br>多个字体系列,使用,分隔<br>font-family:幼圆,黑体,“mv boli”;<br>③字体加粗<br>font-weight:normal bold lighter bolder<br>无单位的数字,必须是100的整倍数,不能超过1000<br>400—normal<br>700—bold<br>300—lighter<br>④字体样式<br>font-style:normal/italic<br>⑤小型大写字母<br>font-variant:small-caps;<br>⑥简写方式<br>font:style variant weight size family;<br>最简方式font:size family;</p>
+<h2 id="文本对齐-text-align-center-justify"><a href="#文本对齐-text-align-center-justify" class="headerlink" title="文本对齐 text-align:center / justify"></a><a id="dq">文本对齐 text-align:center / justify</a></h2><p>text-align:left/center/right/ justify(左右都对齐);<br>注意 :<br>块级居中 margin:0 auto 让块级元素自己水平居中 写进本身<br>行内和行内块居中 text-align:center 让元素内部的子元素(非块级)水平居中写进父元素</p>
+<p>行高:定义一行文本的高度 . line-height: ; . 特点: 当行高大于文本字号时,文本将在行高的垂直中间显示<br>用于文本与容器垂直居中,行高与容器高度值相等,把行高设置为容器高度,来实现文本相对于容器垂直居中<br>取值:1.以px为单位的数字 2.无单位的(整数小数都可以)数字(写n意味着行高是字数的n倍) bug:折行溢出 所以在文本有多行的情况下不建议使用行高控制垂直居中</p>
+<p>文本线条的修饰 text-decoration:underline(下划线)/overline(上划线)/line-through(删除线)/none(去除所有线条);</p>
+<p>首行缩进 text-indent: ; 取值以px为单位的数字</p>
+<h2 id="文本阴影"><a href="#文本阴影" class="headerlink" title="文本阴影"></a><a id="yy">文本阴影</a></h2><p>text-shadow:h-shadow v-shadow blur color<br>h-shadow: 水平方向的阴影偏移<br>v-shadow:垂直方向的阴影偏移<br>blur:阴影模糊距离<br>color:阴影颜色</p>
+<p>表格的相关样式<br>table设置边框,只有最外一圈的边框,里面没有,要设置里的border<br>th/td尺寸,边框,字体,文本,内边距,外边距失效</p>
+<p>垂直对齐方式<br>vertical-align: top/middle/bottom;</p>
+<p>表格特殊表现方式<br>td中的数据长度少:<br>table设置的尺寸值大,td设置的尺寸值小,显示以table设置的为准<br>table设置的尺寸值小,td设置的尺寸值大,table宽度以table设置为准<br>table高度,以td设置为准<br>td中的数据长度多:<br>table尺寸,以数据的长度为准</p>
+<h2 id="边框合并"><a href="#边框合并" class="headerlink" title="边框合并"></a><a id="hb">边框合并</a></h2><p>border-collapse:collapse;边框合并, 默认值separate分离<br>边框边距 border-spacing:; 前提需要边框是分离状态border-collapse:separate;<br>取值, px为单位的数字<br>一个值,水平和垂直距离同时设置<br>两个值,第一个值水平,第二个是垂直</p>
+<p>标题位置<br>caption-side:top/bottom;</p>
+<h2 id="布局（layout）"><a href="#布局（layout）" class="headerlink" title="布局（layout）"></a><a id="lo">布局（layout）</a></h2><p>设置表格显示布局<br>table-layout:auto;表格自动布局 列的尺寸由内容决定,内容比尺寸大,按内容显示,内容比尺寸小,按尺寸显示,表格数据预先读取在内存,再一次性渲染到页面,慢,效率低 优点表格灵活 用于不确定每列大小不复杂的表格<br>table-layout:fixed;表格固定布局 列的尺寸就以设置的尺寸为准</p>
+<p>1.什么是定位<br>设置页面中元素的位置<br>2.分类<br>1.普通流定位<br>2.浮动定位<br>3.相对定位<br>4.绝对定位<br>5.固定定位</p>
+<p>3.普通流定位(默认文档流定位)<br>1.每个元素在页面中都占自己的空间<br>2.每个元素都是从父元素的左上角开始显示<br>3.块级元素单独成行,从上往下逐个排列<br>4.行内元素和行内块,与其他行内元素和行内块共用一行<br>从左往右往右逐个显示,一行放不下自动换行</p>
+<h2 id="浮动"><a href="#浮动" class="headerlink" title="浮动"></a><a id="fl">浮动</a></h2><p>通过浮动可以使一个元素 向其父元素的左侧或右侧移动 使用float 属性来设置于元素的浮动<br>可选值: none 默认值，元素不浮动<br>left 元素向左浮动<br>right 元素向右浮动<br>注意，元素设置浮动以后，水平布局的等式便不需要强制成立<br>元素设置浮动以后，会完全从文档流中脱离，不再占用文档流的位置， 所以元素 下边的还在文档流中的元素会自动向上移动</p>
+<p>浮动的特点:<br>1、浮动元素会完全脱离文档流，不再占据文档流中的位置<br>2、设置浮动以后元素会向父元素的左侧或右侧移动，<br>3、浮动元素默认不会从父元素中移出<br>4、浮动元素向左或向右移动时，不会超过它前边的其他浮动元素<br>5、如果浮动元素的上边是一个没有浮动的块元素，则浮动元素无法上移<br>6、浮动元素不会超过它上边的浮动的兄弟元素，最多最多就是和它一样高</p>
+<p>浮动目前来讲它的主要作用就是让页面中的元素可以水平排列，<br>通过浮动可以制作一些水平方向的布局<br>浮动元素不会盖住文字，文字会自动环绕在浮动元素的周围，<br>所以我们可以利用浮动来设置文字环绕图片的效果</p>
+<p>元素设置浮动以后，将会从文档流中脱离，从文档流中脱离后，元素的一些特点也会发变化<br>脱离文档流的特点:<br>块元素:<br>1、块元素不在独占页面的一行<br>2、脱离文档流以后，块元素的宽度和高度默认都被内容撑开<br>行内元素:<br>行内元素脱离文档流以后会变成块元素（可设置宽高），特点和块元素一样<br>脱离文档流以后，不需要再区分块和行内了</p>
+<p>浮动定位<br>让块级元素横向显示<br>float:<br>取值 1.left 左浮动,让元素浮动后,<br>停靠父元素的左边,或者挨着其它已浮动元素<br>2.right 右浮动,让元素浮动后,<br>停靠父元素的右边,或者挨着其它已浮动元素<br>3.none 默认缺省值,不做任何浮动,就是默认文档流<br>浮动的特点<br>1.元素一旦浮动,脱离文档流(不占页面空间,后面元素上前补位)<br>脱离文档流</p>
+<p>元素不占据页面空间,后面元素上前补位<br>元素一旦脱离文档流,元素就变为块级元素<br>元素脱离文档流,元素没有设置宽度,元素的宽度靠内容撑开<br>2.浮动元素停靠父元素的左边或者右边,或者是其它已浮动元素的边缘<br>3.父元素横向显示不下所有浮动的子元素时,显示不下的元素会自动换行<br>4.浮动元素主要解决,多个块级元素在同一行显示的问题<br>5.浮动引发特殊情况<br>①元素一旦浮动,如果元素没有定义宽度,那么元素浮动之后的宽度将以内容为准<br>②元素一旦浮动,就会变成块级元素(允许设置尺寸,垂直外边距有效)<br>③浮动元素存在占位问题<br>浮动元素会在浮动的方向上占位,导致被挤下去的元素不能占用之前浮动元素浮动方向上位置<br>④天生不被浮动元素压着<br>行内元素,行内块,文本,不会被浮动元素压在下面<br>而是环绕着浮动元素显示<br>脱离文档,意味着什么<br>1.元素不在文档流占位置<br>2.后续元素上前补位<br>3.如果没有设置宽,宽度以内容为准<br>4.元素就会变成块级(设置宽高有效,上下外边距有效)</p>
+<h2 id="清除浮动"><a href="#清除浮动" class="headerlink" title="清除浮动"></a><a id="nfl">清除浮动</a></h2><p>清除浮动(清除之前浮动元素带来的影响(不被浮动元素压着))<br>clear: left / right / both</p>
+<h2 id="高度坍塌"><a href="#高度坍塌" class="headerlink" title="高度坍塌"></a><a id="tt">高度坍塌</a></h2><p>由于父元素没有定义高度,内部所有子元素都脱离文档流,导致父元素认为在文档流中没有子元素的高度了,所以父元素就失去了高度<br>解决方案:1.给父元素设置高度.弊端:很多时候,不能确定父元素高度<br>2.父元素也浮动.弊端:父元素浮动会影响父元素的同级元素<br>3.overflow:hidden/auto</p>
+<ol start="4">
+<li>在父元素中,追加一个空的块级元素,设置clear:both;为了给父元素一个高度</li>
+</ol>
+<p>写样式的思路<br>1.找元素 从外往里 从左往右 从上往下<br>2.写样式<br>①宽高,大体位置<br>②边框,背景<br>③文本所有样式<br>④微调</p>
+<h2 id="显示方式"><a href="#显示方式" class="headerlink" title="显示方式"></a><a id="mt">显示方式</a></h2><p>display:none 让元素脱离文档流隐藏 / block 块级 / inline 行内 / inline-block 行内块 / table 表格(把任意元素转化为table显示方式(内容大尺寸小按内容大小))</p>
+<h2 id="显示效果"><a href="#显示效果" class="headerlink" title="显示效果"></a><a id="xg">显示效果</a></h2><p>visibility: 默认值 visible 可见的 hidden 隐藏的</p>
+<h2 id="visibility-hidden和display-none的区别"><a href="#visibility-hidden和display-none的区别" class="headerlink" title="visibility:hidden和display:none的区别"></a><a id="qbb">visibility:hidden和display:none的区别</a></h2><p>※面试题:visibility:hidden和display:none的区别<br>CSS Display(显示) Visibility（可见性）<br>隐藏一个元素可以通过把display属性设置为”none”，或把visibility属性设置为”hidden”。但是请注意，这两种方法会产生不同的结果。<br>visibility:hidden可以隐藏某个元素，但隐藏的元素仍需占用与未隐藏之前一样的空间。也就是说，该元素虽然被隐藏了，但仍然会影响布局。<br>display:none可以隐藏某个元素，且隐藏的元素不会占用任何空间。也就是说，该元素不但被隐藏了，而且该元素原本占用的空间也会从页面布局中消失。<br>display:none脱离文档流,不占位置隐藏<br>visibility:hidden不脱离文档流,占着位置隐藏</p>
+<h2 id="透明度"><a href="#透明度" class="headerlink" title="透明度"></a><a id="tmd">透明度</a></h2><p>opacity:0~1 0 是全透明 1 是不透明</p>
+<h2 id="opacity和rgba的区别"><a href="#opacity和rgba的区别" class="headerlink" title="opacity和rgba的区别"></a><a id="or">opacity和rgba的区别</a></h2><p>※面试题:opacity和rgba的区别<br>opacity 元素内部所有颜色都会跟着变透明,后代元素受影响<br>rgba 只改变当前的透明度 √</p>
+<h2 id="vertical-align-垂直对齐方式"><a href="#vertical-align-垂直对齐方式" class="headerlink" title="vertical-align 垂直对齐方式"></a><a id="cz">vertical-align 垂直对齐方式</a></h2><p>vertical-align : top / middle / bottom ;<br>①用在table/th/td中使用,控制table中的内容的垂直对齐方式<br>vertical-align : top / middle / bottom ;<br>②img中使用,给图片设置垂直对齐,图片本身不动,影响的是图片前后的文本位置(行内,行内块)<br>vertical-align : top / middle / bottom / baseline基线(第三条线)(默认值)<br>项目中,经常为图片设置vertical-align,让文本不以基线对齐(图片旁边有文字时使用)</p>
+<h2 id="光标的设置"><a href="#光标的设置" class="headerlink" title="光标的设置"></a><a id="cl">光标的设置</a></h2><p>cursor:default 箭头<br>pointer 小手<br>crosshair +<br>help 帮助(问号)<br>text 文本<br>wait 等待</p>
+<h2 id="列表的样式"><a href="#列表的样式" class="headerlink" title="列表的样式"></a><a id="lbys">列表的样式</a></h2><p>①设置列表标识项<br>list-style-type:disc/circle/square/none;<br>②标识项设置为图片<br>list-style-image:url(true.png);<br>③列表项的位置<br>list-style-position:inside/outside(默认值)<br>④简写方式<br>list-style:type/url position:<br>项目中,使用最频繁的方式 list-style:none;<br>⑤无序列表在项目中地位和使用方式<br>ul多用于布局</p>
+<h2 id="定位"><a href="#定位" class="headerlink" title="定位"></a><a id="dw">定位</a></h2><p>定位—相对定位,绝对定位,固定定位<br>position: static 静态,默认值,文档流<br>relative 相对定位<br>absolute 绝对定位<br>fixed 固定定位<br>注意:<br>1.一个元素被position修饰,并且取值为relative/ absolute/ fixed<br>此元素被称为已定位元素<br>2.一个元素变成已定位元素之后,<br>解锁4个偏移属性<br>top: 离顶部多远 + ↓ - ↑<br>right:<br>bottom:<br>left: 离左边多远 + → - ←<br>①相对定位<br>position:relative;<br>相对定位不脱离文档流,对周围元素的位置没有任何影响<br>如果相对定位不写偏移属性或者偏移量为0,效果与没写定位一样<br>相对自已原来位置做偏移原来的位子不会被占着(不脱离文档流)<br>使用场合<br>①类似于margin(margin挤开,相对定位覆盖其他元素),做自身位置的微调<br>②作为绝对定位的祖先级已定位属性(子绝父相,此处多不写偏移属性)<br>偏移属性的特点: 上下冲突,以top为准 ; 左右冲突,以left为准<br>②绝对定位<br>position:absolute;<br>绝对定位脱离文档流<br>1.没有已定位的祖先级元素,相对body左上角偏移<br>2.相对于,离自己最近的,已定位的,祖先级元素的左上角做偏移<br>注意:最适合把祖先级变成已定位元素的样式,relative<br>③固定定位<br>position:fixed;<br>将元素固定在页面上某个位置,不会随着滚动条滚动,变化位置<br>一直固定在可视区域<br>顶部定位影响下面元素顶部不可见问题解决:下面元素设置magin-top值</p>
+<h2 id="堆叠顺序"><a href="#堆叠顺序" class="headerlink" title="堆叠顺序"></a><a id="dd">堆叠顺序</a></h2><p>z-index:无单位正整数<br>注意:<br>1.定位的堆叠和浮动的脱离文档流,不是一个体系(都压着浮动,不管是否设置z-index或设置多少,定位永远比浮动高)<br>2.默认,后声明的定位元素,堆叠顺序高,但是不会超过1(默认的所有小于1后写大点,随便设置堆叠顺序都比默认的高)<br>3.z-index只对已定位元素生效<br>4.堆叠顺序对父子级元素无效,子元素永远在父元素的上面</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/06/05/AboutCSS/" data-id="ckqbxxuu70000t5x91bkh92hx" data-title="AboutCSS" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/learningProgress/" rel="tag">learningProgress</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2021/05/20/HexoBuildYourBlog/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">HexoBuildYourBlog</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Experience-sharing/" rel="tag">Experience sharing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/learningProgress/" rel="tag">learningProgress</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/route/" rel="tag">route</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Experience-sharing/" style="font-size: 10px;">Experience sharing</a> <a href="/tags/learningProgress/" style="font-size: 10px;">learningProgress</a> <a href="/tags/route/" style="font-size: 10px;">route</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/06/05/AboutCSS/">AboutCSS</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/20/HexoBuildYourBlog/">HexoBuildYourBlog</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/08/F0re5t%E5%B8%88%E5%82%85%E5%89%8D%E7%AB%AF%E8%B7%AF%E7%BA%BF%E8%A7%84%E5%88%92%E4%BB%A5%E5%8F%8A%E8%A7%A3%E6%83%91/">F0re5t师傅前端路线规划以及解惑</a>
+          </li>
+        
+          <li>
+            <a href="/2021/04/30/hello/">HELLO</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
